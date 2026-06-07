@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: "roboto", sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+.cabecalho {
+  background-color: #141414;
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 40px;
+}
+.cabecalho nav {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.cabecalho nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.banner {
+  position: relative;
+  background-image: url("../img/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
