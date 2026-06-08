@@ -27,13 +27,37 @@ body {
 
 .banner {
   position: relative;
-  background-image: url("../img/banner.jpg");
+  background-image: url("../img/Registros/capa.png");
   background-size: cover;
   background-position: center;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  padding: 128px 1rem 1rem;
+}
+.banner::after {
+  content: "";
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.151),
+    rgba(0, 0, 0, 0.301)
+  );
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.conteudo {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+}
+.nomes {
+  font-family: "Great Vibes", cursive;
+  font-size: 48px;
+  margin: 0;
+}
+.detalhes {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #ccc;
 }
