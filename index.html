@@ -16,11 +16,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header class="cabecalho">
       <div class="logo">
-        <img src="./assents/img/logo.jpg" alt="Logo do site" width="50px" />
+        <img src="./assents/img/logo.jpg" alt="Logo do site" width="70px" />
       </div>
       <nav>
         <a href="#">Início</a>
@@ -34,7 +40,7 @@
       <div class="conteudo">
         <p class="nomes">Ismael e Ihully</p>
         <p class="detalhes">
-          <span> 12 de Junho - 8 temporadas </span>
+          <span> 12 de Junho - 8 Temporadas </span>
           <span class="stars"
             ><i class="fa-solid fa-star" style="color: rgb(239, 11, 11)"></i>
             <i class="fa-solid fa-star" style="color: rgb(239, 11, 11)"></i>
@@ -46,8 +52,69 @@
         <p class="descricao">
           Feliz dia dos namorados, meu amor! Que nosso amor continue crescendo a
           cada dia e que possamos celebrar muitos outros dias dos namorados
-          juntos. Te amo!
+          juntos. Te amo! Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Voluptatum a facilis, soluta inventore aliquid impedit, eligendi
+          iste repellendus sit suscipit vitae qui voluptates minus quis
+          recusandae voluptas ducimus nemo tempora.
         </p>
+        <div class="botoes">
+          <button class="botao">
+            <i class="fa-solid fa-play"></i> Continuar
+          </button>
+          <button class="botao">
+            <i class="fa-solid fa-star"></i> Favorito
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="momentos">
+      <h2>Nossos Momentos Especiais</h2>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="./assents/img/Registros/01.jpeg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./assents/img/Registros/02.jpeg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./assents/img/Registros/03.jpeg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./assents/img/Registros/04.jpeg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./assents/img/Registros/05.jpeg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./assents/img/Registros/06.jpeg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./assents/img/Registros/07.jpeg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./assents/img/Registros/08.jpeg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./assents/img/Registros/09.jpeg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./assents/img/Registros/10.jpeg" alt="" />
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
       </div>
     </section>
 
