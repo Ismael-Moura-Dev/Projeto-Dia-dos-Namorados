@@ -102,14 +102,50 @@ body {
   margin-right: 2px;
 }
 
+/* CONTAINER PRINCIPAL DA DESCRIÇÃO */
 .descricao {
   margin: 1.5rem 0;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #e0e0e0;
-  max-width: 500px;
+  max-width: 650px; /* Aumentei um pouco a largura para a leitura ficar mais fluida */
 }
 
+/* LINHA DE METADADOS (100% Relevante, Ano) */
+.info-netflix {
+  display: flex;
+  gap: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.info-netflix .relevante {
+  color: #46d369; /* O clássico verde de "Match" da Netflix */
+}
+
+.info-netflix .ano,
+.info-netflix .classificacao {
+  color: #fff;
+}
+
+/* TEXTO DA SINOPSE */
+.texto-principal {
+  font-size: 16px;
+  line-height: 1.5; /* Isso cria o "respiro" entre as linhas do texto */
+  color: #fff;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Sombrinha no texto para facilitar a leitura em cima da foto */
+}
+
+/* ELENCO E GÊNEROS */
+.creditos {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d2d2d2; /* Texto um pouco mais cinza para diferenciar da sinopse */
+}
+
+.creditos .destaque {
+  color: #777777; /* O prefixo "Elenco:" e "Gêneros:" ainda mais discreto */
+}
 /* BOTÕES */
 .botoes {
   display: flex;
@@ -134,9 +170,9 @@ body {
 }
 
 .botao:hover {
-  background-color: #ff1493;
-  border-color: #ff1493;
-  color: #fff;
+  background-color: #fff;
+  border-color: #fff;
+  color: black;
   transform: scale(1.05);
 }
 
@@ -144,10 +180,91 @@ body {
   transform: scale(0.98);
 }
 
+/* ============ GUIA DE TEMPORADAS ============ */
+.guia-temporadas {
+  padding: 3rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.guia-temporadas h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.episodio {
+  display: flex;
+  gap: 20px;
+  padding: 25px 0;
+  border-bottom: 1px solid #404040; /* Linha divisória fina estilo Netflix */
+  align-items: flex-start;
+}
+
+/* Tira a linha do último item */
+.episodio:last-child {
+  border-bottom: none;
+}
+
+.episodio-numero {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff; /* Trocamos a cor dependendo de como você preferir, branco fica clássico */
+  min-width: 90px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.episodio-info h3 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.episodio-info p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #d2d2d2;
+  margin: 0;
+}
+
+/* Estilo das etiquetas "Em Breve" e "Confirmada" */
+.badge {
+  font-size: 12px;
+  padding: 4px 8px;
+  background-color: #333;
+  border-radius: 4px;
+  font-weight: normal;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.badge-vermelha {
+  background-color: #e50914; /* Vermelho Netflix para destacar a confirmada */
+  font-weight: bold;
+}
+
+/* Ajuste para celular */
+@media (max-width: 768px) {
+  .episodio {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+  }
+  .episodio-numero {
+    font-size: 20px;
+    color: #e50914; /* No celular, colocamos vermelho para destacar mais */
+  }
+}
+
 /* SEÇÃO DE MOMENTOS */
 .momentos {
   padding: 3rem 1rem;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -157,6 +274,7 @@ body {
   margin-bottom: 2.5rem;
   text-align: center;
   color: #fff;
+  padding: 0 1rem;
 }
 
 /* SWIPER STYLES */
@@ -175,11 +293,11 @@ body {
   overflow: hidden;
   background-color: #1a1a1a;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
 }
 
 .swiper-slide:hover {
-  transform: scale(1.02);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
 }
 
 .swiper-slide img {
@@ -187,8 +305,38 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.5s ease;
 }
 
+.swiper-slide:hover img {
+  transform: scale(1.05);
+}
+
+/* ============ RODAPÉ (DIREITOS RESERVADOS) ============ */
+.rodape {
+  background-color: #141414; /* Mesmo fundo do cabeçalho */
+  border-top: 1px solid #333; /* Linha sutil separando do resto do site */
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.rodape p {
+  color: #757575; /* Cinza clássico de rodapé */
+  font-size: 14px;
+  margin: 0 0 8px 0;
+}
+
+.rodape .rodape-detalhe {
+  font-size: 12px;
+  color: #555;
+}
+
+/* Efeitozinho legal se passar o mouse */
+.rodape p:hover {
+  color: #b3b3b3;
+  transition: color 0.3s ease;
+}
 /* ============ MEDIA QUERIES - RESPONSIVIDADE ============ */
 
 /* TABLET (768px e abaixo) */
@@ -353,7 +501,8 @@ body {
   }
 
   .swiper-slide:hover {
-    transform: scale(1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
   }
 }
 
