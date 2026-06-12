@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "roboto", sans-serif;
@@ -21,7 +27,7 @@ body {
 }
 
 .cabecalho .logo img {
-  width: 70px;
+  width: 80px;
   height: auto;
 }
 
@@ -84,7 +90,7 @@ body {
 }
 
 .detalhes {
-  font-size: 14px;
+  font-size: 30px;
   margin-bottom: 1.5rem;
   color: #ccc;
   display: flex;
@@ -421,7 +427,7 @@ body {
   }
 
   .cabecalho .logo img {
-    width: 50px;
+    width: 80px;
   }
 
   .cabecalho nav {
@@ -440,11 +446,15 @@ body {
   .banner {
     padding: 60px 1rem 2rem;
     min-height: 350px;
-    background-position: right center;
+    background-position: center 75%;
   }
 
   .banner::after {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.329),
+      rgba(0, 0, 0, 0.062)
+    );
   }
 
   .conteudo {
@@ -454,13 +464,26 @@ body {
   .nomes {
     font-size: 28px;
     margin-bottom: 0.8rem;
+    color: #fff;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9), 
+               -1px -1px 0 rgba(0, 0, 0, 0.7),  
+                1px -1px 0 rgba(0, 0, 0, 0.7),
+               -1px  1px 0 rgba(0, 0, 0, 0.7),
+                1px  1px 0 rgba(0, 0, 0, 0.7);
+}
   }
 
   .detalhes {
     font-size: 12px;
     flex-direction: column;
     gap: 0.5rem;
-  }
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9), 
+               -1px -1px 0 rgba(0, 0, 0, 0.7),  
+                1px -1px 0 rgba(0, 0, 0, 0.7),
+               -1px  1px 0 rgba(0, 0, 0, 0.7),
+                1px  1px 0 rgba(0, 0, 0, 0.7);
+}
+  
 
   .descricao {
     font-size: 14px;
@@ -472,6 +495,13 @@ body {
   .botoes {
     gap: 10px;
     flex-direction: column;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9), 
+               -1px -1px 0 rgba(0, 0, 0, 0.7),  
+                1px -1px 0 rgba(0, 0, 0, 0.7),
+               -1px  1px 0 rgba(0, 0, 0, 0.7),
+                1px  1px 0 rgba(0, 0, 0, 0.7);
+
+    
   }
 
   .botao {
